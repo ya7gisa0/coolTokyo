@@ -5,8 +5,28 @@
   <title>cool Tokyo</title>
   <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  
 </head>
 <body>
+<div id="map" style="width:100%; height:50vh"></div>
+
+<script type="text/javascript" charset="utf-8" src="http://js.api.olp.yahooapis.jp/OpenLocalPlatform/V1/jsapi?appid=dj0zaiZpPUw1cWk5Y0hjOW9ITSZzPWNvbnN1bWVyc2VjcmV0Jng9Mzc-"></script>
+<script type="text/javascript">
+window.onload = function(){
+    var ymap = new Y.Map("map");
+    var label1 = new Y.Label(new Y.LatLng(35.66572, 139.73100),"上野公園 36.1度");
+    var label2 = new Y.Label(new Y.LatLng(35.658593, 139.73100),"芝公園 32.8度");
+    ymap.drawMap(new Y.LatLng(35.66572, 139.73100), 13, Y.LayerSetId.NORMAL);
+    ymap.addFeature(label);
+    label1.bind('click',function(){
+window.location.href = "video.html";
+    });
+    label2.bind('click',function(){
+window.location.href = "video.html";
+    });
+}
+</script>
 
 </body>
 </html>
