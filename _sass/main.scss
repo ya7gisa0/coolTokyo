@@ -1,0 +1,41 @@
+// import noto sans
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans);
+
+html{
+  font-size: 62.5%;
+  font-family: 'Noto Sans', 'serif';
+}
+
+#map {
+  width: 100vw;
+  height: 50vh;
+}
+
+dl {
+  padding: 1vh;
+
+  > dt {
+    float: left;
+    margin-bottom: 1vh;
+    > a {
+      color: #000000;
+      text-decoration: none;
+    }
+  }
+  > dd {
+    //float: left;
+    -webkit-margin-start:0;
+    margin-bottom: 1vh;
+    // clear fix
+    &:after {
+      content: '';
+      display: block;
+      clear: left;
+    }
+  }
+}
+
+p.yolp-tlchp {
+  width: 32vw !important;
+  text-align: center;
+}

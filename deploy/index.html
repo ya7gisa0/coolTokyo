@@ -1,66 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="default.css" type="text/css" />
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script src="assets/js/main.js"></script>
 </head>
 <body>
-<div id="map" style="width:100%; height:50vh"></div>
+<div id="map"></div>
 
 <script type="text/javascript" charset="utf-8" src="http://js.api.olp.yahooapis.jp/OpenLocalPlatform/V1/jsapi?appid=dj0zaiZpPUw1cWk5Y0hjOW9ITSZzPWNvbnN1bWVyc2VjcmV0Jng9Mzc-"></script>
-<script type="text/javascript">
-window.onload = function(){
-
-//マップ生成
-    var ymap = new Y.Map("map");
-
-    //公園ラベル生成
-    var label1 = new Y.Label(new Y.LatLng(35.71413, 139.77264),"上野公園 36.1度");
-    var label2 = new Y.Label(new Y.LatLng(35.654938, 139.747984),"芝公園 39.0度");
-    var label3 = new Y.Label(new Y.LatLng(35.673824, 139.756163),"日比谷公園 39.4度");
-    var label4 = new Y.Label(new Y.LatLng(35.671736, 139.694945),"代々木公園 40.1度");
-    var label5 = new Y.Label(new Y.LatLng(35.676114, 139.713496),"明治公園 44.1度");
-
-    //中心点設定（皇居）
-    ymap.drawMap(new Y.LatLng(35.685175, 139.752799), 13, Y.LayerSetId.NORMAL);
-
-    //ラベルを地図に載せる
-    ymap.addFeature(label1);
-    ymap.addFeature(label2);
-    ymap.addFeature(label3);
-    ymap.addFeature(label4);
-    ymap.addFeature(label5);
-
-    //イベント
-    label1.bind('click',function(){
-window.location.href = "video1.html";
-    });
-    label2.bind('click',function(){
-window.location.href = "video1.html";
-    });
-    label3.bind('click',function(){
-window.location.href = "video1.html";
-    });
-    label4.bind('click',function(){
-window.location.href = "video1.html";
-    });
-    label5.bind('click',function(){
-window.location.href = "video1.html";
-    });
-}
-</script>
-
 </div>
 
 <div>
-  <p>
-    <strong>1</strong><a href="video1.html">上野公園</a> 36.1度 <br>
-    <strong>2</strong><a href="video1.html">芝公園</a> 39.0度 <br>
-    <strong>3</strong><a href="video1.html">日比谷公園</a> 39.4度 <br>
-    <strong>4</strong><a href="video1.html">代々木公園</a> 40.1度 <br>
-    <strong>5</strong><a href="video1.html">明治公園</a> 44.1度 <br>
-    </p>
+  <dl>
+    <dt><a href="video1.html">上野公園</a></dt>
+    <dd>36.1&#8451;</dd>
+    <dt><a href="video1.html">芝公園</a></dt>
+    <dd>39.0&#8451;</dd>
+    <dt><a href="video1.html">日比谷公園</a></dt>
+    <dd>39.4&#8451;</dd>
+    <dt><a href="video1.html">代々木公園</a></dt>
+    <dd>40.1&#8451;</dd>
+    <dt><a href="video1.html">明治公園</a></dt>
+    <dd>44.1&#8451;</dd>
+  </dl>
 </div>
 </body>
 </html>
