@@ -16,14 +16,14 @@ window.onload = function(){
     var ymap = new Y.Map("map");
 
     //公園ラベル生成
-    var label1 = new Y.Label(new Y.LatLng(35.71413, 139.77264),"上野公園 36.1度");
+    var label1 = new Y.Label(new Y.LatLng(35.617104, 139.779982),"お台場公園 6度");
     var label2 = new Y.Label(new Y.LatLng(35.654938, 139.747984),"芝公園 39.0度");
     var label3 = new Y.Label(new Y.LatLng(35.673824, 139.756163),"日比谷公園 39.4度");
     var label4 = new Y.Label(new Y.LatLng(35.671736, 139.694945),"代々木公園 40.1度");
     var label5 = new Y.Label(new Y.LatLng(35.676114, 139.713496),"明治公園 44.1度");
 
-    //中心点設定（皇居）
-    ymap.drawMap(new Y.LatLng(35.685175, 139.752799), 13, Y.LayerSetId.NORMAL);
+    //中心点設定（渋谷）
+    ymap.drawMap(new Y.LatLng(35.664035, 139.698212), 13, Y.LayerSetId.NORMAL);
 
     //ラベルを地図に載せる
     ymap.addFeature(label1);
@@ -37,16 +37,16 @@ window.onload = function(){
 window.location.href = "video1.html";
     });
     label2.bind('click',function(){
-window.location.href = "video1.html";
+window.location.href = "video2.html";
     });
     label3.bind('click',function(){
-window.location.href = "video1.html";
+window.location.href = "video2.html";
     });
     label4.bind('click',function(){
-window.location.href = "video1.html";
+window.location.href = "video2.html";
     });
     label5.bind('click',function(){
-window.location.href = "video1.html";
+window.location.href = "video2.html";
     });
 }
 </script>
